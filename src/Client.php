@@ -4,6 +4,8 @@ namespace Reviu;
 
 class Client
 {
+    const VERSION = '0.1.1';
+
     private $baseUrl;
     private $token;
     private $timeout;
@@ -70,6 +72,7 @@ class Client
         curl_setopt($curl, CURLOPT_CUSTOMREQUEST, $method);
         curl_setopt($curl, CURLOPT_CONNECTTIMEOUT, $this->timeout);
         curl_setopt($curl, CURLOPT_TIMEOUT, $this->timeout);
+        curl_setopt($curl, CURLOPT_USERAGENT, 'Reviu-PHP-Client/' . self::VERSION);
         curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, true);
         curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, 2);
         if (defined('CURLOPT_PROTOCOLS') && defined('CURLPROTO_HTTPS')) {

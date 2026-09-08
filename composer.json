@@ -2,7 +2,7 @@
     "name": "reviu/php-client",
     "description": "Client PHP per pianificare richieste di recensione tramite Reviu API v1",
     "type": "library",
-    "license": "proprietary",
+    "license": "MIT",
     "require": {
         "php": ">=7.3",
         "ext-curl": "*"
